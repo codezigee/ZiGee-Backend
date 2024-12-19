@@ -1,0 +1,6 @@
+rootProject.name = 'zigee'
+// 서브 모듈
+include 'ZiGee-Api'
+include 'ZiGee-Domain'
+include 'ZiGee-Infrastructure'
+include 'ZiGee-Common'
