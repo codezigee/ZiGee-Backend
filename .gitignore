@@ -37,3 +37,8 @@ out/
 .vscode/
 .env
 .env.*
+
+# ZiGee-Api 모듈
+/ZiGee-Api/src/main/resources/env.yml
+/ZiGee-Api/src/main/resources/application-*.yml
+!/ZiGee-Api/src/main/resources/application.yml

@@ -1,15 +1,15 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.4.0'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '3.4.5'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'academy'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
@@ -20,6 +20,7 @@ allprojects {
 }
 
 bootJar.enabled = false
+jar.enabled = false
 
 subprojects {
 	apply plugin: 'java'
@@ -47,7 +48,16 @@ subprojects {
 		useJUnitPlatform()
 	}
 
+	// 기본적으로 모든 서브모듈은 bootJar 비활성화
+	bootJar.enabled = false
+	jar.enabled = true
 
+}
+
+// ZiGee-Api 모듈만 실행 가능한 JAR 생성
+project(':ZiGee-Api') {
+	bootJar.enabled = true
+	jar.enabled = true
 }
 
 
