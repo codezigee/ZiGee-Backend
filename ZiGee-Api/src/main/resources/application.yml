@@ -1,11 +1,11 @@
 spring:
-  config:
-    import: env.yml
-
   profiles:
-    active: dev
-    include: jwt
+    group:
+      local: "local, datasource, security, kakao"
+      dev: "dev, datasource, security, kakao"
+      prod: "prod, datasource, security, kakao"
 
 logging:
   level:
+    academy.zigee: debug
     org.springframework: debug
