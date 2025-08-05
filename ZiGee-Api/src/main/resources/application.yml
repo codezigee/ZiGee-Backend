@@ -1,9 +1,9 @@
 spring:
   profiles:
     group:
-      local: "local, datasource, security, kakao"
-      dev: "dev, datasource, security, kakao"
-      prod: "prod, datasource, security, kakao"
+      local: "local, datasource-h2, security, kakao"
+      dev: "dev, datasource-mysql, security, kakao"
+      prod: "prod, datasource-mysql, security, kakao"
 
 logging:
   level:
