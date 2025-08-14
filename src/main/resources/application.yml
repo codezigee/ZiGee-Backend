@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    group:
+      local: "local, datasource-h2, security, kakao"
+      dev: "dev, datasource-mysql, security, kakao"
+      prod: "prod, datasource-mysql, security, kakao"
+
+logging:
+  level:
+    academy.zigee: debug
+    org.springframework: debug
